@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Login & Registration</title>
+
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	
+</head>
+
+<body>
+  <form action="home.html">
+	<div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">Welcome to <span>RNHS</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>
+			</div>
+			<label for="username">Username</label>
+			<br/>
+			<input type="text" id="username">
+			<br/>
+			<label for="password">Password</label>
+			<br/>
+			<input type="password" id="password">
+			<br/>
+			<button type="submit">Sign In</button>
+			<br/>
+			<a href="#"><p class="small">Forgot your password?</p></a>
+		</div>
+	</div>
+</form>
+</body>
+
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
+
+</html>
